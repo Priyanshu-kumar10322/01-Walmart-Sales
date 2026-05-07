@@ -25,8 +25,10 @@ A store opens its doors every week, stocks its shelves, adjusts for the weather,
 8. `Unemployment` : Regional unemployment rate (%) representing the economic conditions around the store during that week.
 
 ## EDA Ques 
-- 1. Which store generates the highest total weekly sales?
-- 2. Do holiday weeks lead to higher sales than non-holiday weeks?
-- 3. Does temperature correlate with weekly sales?
-- 4. Which month consistently generates the most revenue?
+- Q1. Which store generates the highest total weekly sales?
+- Q2. Do holiday weeks lead to higher sales than non-holiday weeks?
+- Q3. Does temperature correlate with weekly sales?
+- Q4. Which month consistently generates the most revenue?
 
+## Data Wrangling:
+Our data can be found on `Walmart_Sales.csv` file provided on this repository, downloaded from  [Kaggle](https://www.kaggle.com/code/prantosifat/walmart-sales). 
