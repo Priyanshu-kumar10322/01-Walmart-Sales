@@ -8,8 +8,6 @@
 | [Data Wrangling](#Data-Wrangling)					   		|
 | [Data Cleaning](#Data-Cleaning)						   	  |
 | [Data Visualization](#Data-Visualization)				|
-| [Conclusion](#Conclusion)									      |
-| [Built with](#Built-with)							   		    |
 
 ## Dataset Description:
 A store opens its doors every week, stocks its shelves, adjusts for the weather, and tracks every dollar — but what actually drives the numbers? This dataset collects 6,435 weekly sales records across multiple Walmart store locations and is focused on the question of whether external economic and environmental conditions influence retail sales performance. A number of characteristics about each store's surrounding environment are included in each row.
@@ -32,3 +30,21 @@ A store opens its doors every week, stocks its shelves, adjusts for the weather,
 
 ## Data Wrangling:
 Our data can be found on `Walmart_Sales.csv` file provided on this repository, downloaded from  [Kaggle](https://www.kaggle.com/code/prantosifat/walmart-sales). 
+
+## Data Cleaning:
+### Exploration Summery
+1. Our dataset consists of 6435 rows with 8 columns, and has no NaNs nor duplicated values.
+2. `Store`        : Unique numeric identifier assigned to each Walmart store location — 45 stores in total. It should be cast to a **category** type since it acts as a label, not a quantity.
+3. `Date`         : Date string of the recorded sales week — needs to be **parsed into datetime** type to enable time-based analysis.
+4. We may **append new columns** derived from `Date` such as `Year`, `Month`, and `Week_Number` for richer temporal analysis.
+5. `Weekly_Sales` : The target variable representing weekly revenue per store — values range from **~$209K to ~$3.8M**, all unique, correctly typed.
+6. `Holiday_Flag` : Contains only `0` and `1` — marks whether the week includes a public holiday. Should be cast to **boolean** type.
+7. `Temperature`  : Records the regional temperature for the week — contains a **negative minimum value (-2.06°F)** that may need to be investigated.
+8. `Fuel_Price`   : Weekly regional fuel price — continuous numeric, no issues detected.
+9. `CPI`          : Consumer Price Index per store region — wide range (**126 to 227**) reflecting different store locations and time periods, correctly typed.
+10. `Unemployment` : Regional unemployment rate per store — values range from **3.87% to 14.31%**, correctly typed.
+
+We endded up with a datafram of 6435 rows and 11 columns, and everything looks tidy and clean. We'd proceed in visualizing it to extract meaningful insights from it.
+
+## Data Visualization
+Using `Matplotlib` and `Seaborn`, we made several meaningful visuals and charts to help us gain informative insights regarding any correlation between attributes in our dataset
